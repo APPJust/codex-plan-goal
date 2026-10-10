@@ -1,0 +1,48 @@
+:root{--bg:#f4f5f9;--grid:#1b1a4512;--ink:#1b1a45;--sub:#4b5070;--muted:#8a90ab;--green:#0f8f6b;--greenL:#d8f1e8;--amber:#c98a12;--amberL:#fbefd2;--red:#cc3f36;--redL:#fbe1de;--card:#ffffff;--line:#9aa0bd;--violet:#5b4fd6}
+*{box-sizing:border-box}
+body{margin:0;background:#e9ebf2;color:var(--ink);font-family:"Lesson Latin","Lesson TC","Segoe UI","Microsoft JhengHei",sans-serif}
+button,select,input{font:inherit}
+button,select{background:var(--ink);color:#fff;border:0;border-radius:9px;padding:9px 14px;cursor:pointer}
+button.ghost{background:#fff;color:var(--ink);border:1px solid #c4c8da}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+#shell{margin:auto;max-width:1400px;padding:20px}
+.page-head h1{font-size:24px;margin:4px 0}
+.note{font-size:14px;color:var(--sub);margin:4px 0 12px}
+#viewport{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 18px 60px #1b1a4530}
+#stage{position:absolute;left:0;top:0;transform-origin:top left;background:var(--bg);overflow:hidden;font-family:"Lesson Latin","Lesson TC",sans-serif}
+#stage:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+#eyebrow{position:absolute;left:96px;top:52px;height:40px;font-family:Consolas,"Lesson Latin",monospace;font-size:24px;letter-spacing:3px;color:var(--green);border:2px solid var(--ink);padding:3px 14px;background:#fff;white-space:nowrap}
+#heading{position:absolute;left:96px;top:104px;width:1728px;height:76px;margin:0;font-size:56px;line-height:76px;font-weight:800;white-space:nowrap}
+#subheading{position:absolute;left:96px;top:184px;width:1728px;height:40px;margin:0;font-size:29px;line-height:40px;color:var(--sub);white-space:nowrap}
+#visual{position:absolute;left:96px;top:236px;width:1728px;height:610px}
+#art{display:block;width:100%;height:100%;overflow:visible;font-family:"Lesson Latin","Lesson TC",sans-serif}
+#caption{position:absolute;left:150px;top:868px;width:1620px;height:168px;z-index:3;border-radius:16px;background:#1b1a45ee;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8px 28px;text-align:center;gap:6px}
+#caption1{font-size:42px;line-height:1.3;font-weight:600}
+#caption .secondary{font-size:34px;line-height:1.3;color:#cfe9df}
+#credit{position:absolute;left:360px;top:300px;width:1200px;height:420px;display:none;align-items:center;justify-content:center;flex-direction:column;gap:34px;background:#fff;border:3px solid var(--ink);box-shadow:14px 14px 0 var(--green)}
+#credit small{font-size:28px;letter-spacing:2px;color:var(--green)}
+#credit strong{font-size:104px;letter-spacing:16px}
+#progress-mark{position:absolute;height:6px;background:var(--green);left:0;bottom:0}
+#controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:14px 0}
+#seek{flex:1;min-width:160px}
+#time{font-variant-numeric:tabular-nums;color:var(--sub);min-width:110px}
+.interaction{padding:20px;border:1px solid #c9cde0;border-radius:14px;background:#fff;margin-top:6px}
+.interaction h2{font-size:20px;margin:0 0 8px}
+.lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.lab-card{border:1px solid #dde0ec;border-radius:12px;padding:16px;background:#fafbfe}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.steps button{background:#fff;color:var(--ink);border:1px solid #b9bed4}
+.steps button[disabled]{opacity:.45;cursor:default}
+.order{min-height:34px;font-weight:600}
+.feedback{margin:8px 0 0;font-weight:600}
+.feedback.ok{color:var(--green)}.feedback.warn{color:var(--amber)}.feedback.bad{color:var(--red)}
+.lab-card label{display:block;margin:10px 0 4px;font-size:15px;color:var(--sub)}
+.lab-card select{background:#fff;color:var(--ink);border:1px solid #b9bed4;width:100%}
+.lab-card input[type=range]{width:100%}
+.cost{font-size:28px;font-weight:800;font-variant-numeric:tabular-nums;margin:10px 0 0}
+.fine{font-size:13px;color:var(--muted)}
+body.export{background:var(--bg)}
+body.export #shell{padding:0;max-width:none}
+body.export #viewport{border-radius:0;box-shadow:none}
+body.export #controls,body.export .interaction,body.export .page-head{display:none}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}

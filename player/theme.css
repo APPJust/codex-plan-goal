@@ -1,0 +1,14 @@
+/* UI-rebuild theme: soft app-like surfaces, one blue accent, bilingual headings. Overrides player.css. */
+:root{--bg:#f2f3f6;--grid:#1d1f2a0c;--ink:#1d1f2a;--sub:#4a4f63;--muted:#8a8fa3;--blue:#3d6ef0;--blueL:#e3eafe;--green:#14875f;--greenL:#dcf2e9;--amber:#b97a10;--amberL:#fcf0d6;--red:#c8423a;--redL:#fbe3e0;--card:#ffffff;--line:#c9ccd8}
+#stage{background:radial-gradient(1200px 700px at 78% 30%,#ffffff 0%,var(--bg) 70%)}
+#stage:before{background-image:radial-gradient(var(--grid) 1.6px,transparent 1.6px);background-size:32px 32px}
+#eyebrow{font-family:"Lesson Latin","Lesson TC",sans-serif;font-weight:700;font-size:22px;letter-spacing:2px;color:var(--blue);border:0;border-radius:20px;background:var(--blueL);padding:6px 18px;height:40px;line-height:28px}
+#heading{font-size:54px}
+#heading .en{font-size:30px;font-weight:600;color:var(--muted);margin-left:22px;letter-spacing:.5px;line-height:1;vertical-align:baseline}
+#subheading{font-size:28px}
+#caption{background:#1d1f2aec;border-radius:20px}
+#caption .secondary{color:#c9d6ff}
+#credit{border:0;border-radius:28px;box-shadow:0 24px 70px #1d1f2a26}
+#credit small{color:var(--blue)}
+#progress-mark{background:var(--blue)}
+button,select{background:var(--ink)}
